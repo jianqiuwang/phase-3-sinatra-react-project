@@ -140,3 +140,14 @@ main {
   margin: 1rem;
   padding: 5px;
 }
+
+.link {
+  border-radius: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 13px;
+  font-weight: normal;
+  padding: 5px 11px;
+  
+}

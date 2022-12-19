@@ -1,7 +1,10 @@
 import React, {useEffect, useState} from "react";
 import Header from "./Header";
+import ListingCard from "./ListingCard";
 import ListingsContainer from "./ListingsContainer";
 import NewListingCards from "./NewListingCards";
+import { BrowserRouter,Route, Switch } from "react-router-dom";
+import NavBar from "./NavBar";
 
 function App() {
   const [cards, setCards]=useState([])
@@ -39,8 +42,22 @@ function App() {
   return (
     <div className="app">
       <Header onSearch={onSearch}/>
-      <ListingsContainer cards={cardDisplay} handleDeleteCard={handleDeleteCard} onUpdateCard={handleUpdateCard}/>
-      <NewListingCards onAddCard={handleAddCard}/>
+      {/* <ListingsContainer cards={cardDisplay} handleDeleteCard={handleDeleteCard} onUpdateCard={handleUpdateCard}/> */}
+      {/* <NewListingCards onAddCard={handleAddCard}/> */}
+
+
+      <BrowserRouter>
+      <NavBar/>
+           <Switch>
+            <Route exaxt path="/addnewcar">
+            <NewListingCards onAddCard={handleAddCard}/>
+            </Route>
+            <Route excat path="/">
+            <ListingsContainer cards={cardDisplay} handleDeleteCard={handleDeleteCard} onUpdateCard={handleUpdateCard}/>
+            </Route>
+            </Switch>
+        </BrowserRouter>
+           
     </div>
   );
 }

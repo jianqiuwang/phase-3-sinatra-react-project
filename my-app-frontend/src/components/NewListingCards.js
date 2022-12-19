@@ -34,7 +34,7 @@ const [price, setPrice] = useState(0)
       <input className="input" type="text" name="image" placeholder="image URL" onChange={(e)=>setImage(e.target.value)}/>
       <input className="input" type="text" name="location" placeholder="location" onChange={(e)=>setLocation(e.target.value)}/>
       <input className="input" type="number" name="price" placeholder="price" onChange={(e)=>setPrice(e.target.value)}/>
-      <button className="input" type="submit">Add Car</button>
+      <button className="input" type="submit">Submit</button>
     </form>
   );
 }
