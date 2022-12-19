@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import Header from "./Header";
 import ListingsContainer from "./ListingsContainer";
 import NewListingCards from "./NewListingCards";
+import ListingCard from "./ListingCard";
 
 function App() {
   const [cards, setCards]=useState([])
@@ -21,6 +22,17 @@ function App() {
     setCards(updatedCards)
   }
 
+  function handleUpdateCard(updatedCardObj) {
+    const updatedCards = cards.map((card) => {
+      if (card.id === updatedCardObj.id) {
+        return updatedCardObj;
+      } else {
+        return card;
+      }
+    });
+    setCards(updatedCards);
+  }
+
   const cardDisplay=cards.filter((card)=>card.description.toLowerCase().includes(search.toLowerCase()))
   console.log(cards)
   console.log(cardDisplay)
@@ -28,7 +40,7 @@ function App() {
   return (
     <div className="app">
       <Header onSearch={onSearch}/>
-      <ListingsContainer cards={cardDisplay} handleDeleteCard={handleDeleteCard}/>
+      <ListingsContainer cards={cardDisplay} handleDeleteCard={handleDeleteCard} onUpdateCard={handleUpdateCard}/>
       <NewListingCards onAddCard={handleAddCard}/>
     </div>
   );

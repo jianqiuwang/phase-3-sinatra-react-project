@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function NewListingCards({ onAddCard }) {
-//   const [body, setBody] = useState("");
+
 const [description, setDescription] = useState("")
 const [image, setImage] = useState("")
 const [location, setLocation] = useState("")

@@ -17,16 +17,21 @@ class ApplicationController < Sinatra::Base
     listing.to_json
   end
 
+  patch '/listings/:id' do
+    listing=Listing.find(params[:id])
+    listing.update(
+      description: params[:description],
+      image: params[:image],
+      location: params[:location],
+      price: params[:price]
+    )
+    listing.to_json
+  end
+
   delete '/listings/:id' do
     listing=Listing.find(params[:id])
     listing.destroy
     listing.to_json
   end
-
-
-
-
-
-
 
 end

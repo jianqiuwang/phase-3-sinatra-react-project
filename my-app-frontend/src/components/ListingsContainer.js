@@ -1,15 +1,13 @@
 import React from "react";
 import ListingCard from "./ListingCard";
 
-function ListingsContainer({cards, handleDeleteCard}) {
+function ListingsContainer({cards, handleDeleteCard, onUpdateCard}) {
   
-  const cardsArray=cards.map((card)=><ListingCard key={card.id} card={card} onDeleteCard={handleDeleteCard}/>)
-
+  const cardsArray=cards.map((card)=><ListingCard key={card.id} card={card} onDeleteCard={handleDeleteCard} onUpdateCard={onUpdateCard}/>)
 
   return (
     <main>
       <ul className="cards">
-        {/* use the ListingCard component to display listings */}
         {cardsArray}
       </ul>
     </main>
