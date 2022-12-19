@@ -2,7 +2,7 @@ import React,{useState} from "react";
 
 function ListingCard({card, onDeleteCard, onUpdateCard}) {
   const [like, setLike]=useState(false);
-  const {id, description, image, location, price } = card;
+  const {description, image, location, price } = card;
   const [updatedDescription, setUpdatedDescription] = useState(description)
   const [updatedImage, setUpdatedImage] = useState(image)
   const [updatedLocation, setUpdatedLocation] = useState(location)
@@ -42,7 +42,6 @@ function ListingCard({card, onDeleteCard, onUpdateCard}) {
         <img src={card.image} alt={card.description} />
       </div>
       <div className="details">
-        {/* <button className={classOfName} onClick={()=>setLike(like=>!like)}>{liked}</button> */}
         {like? (
           <button className="emoji-button favorite active" onClick={()=>setLike(false)}>★</button>
         ) : (
@@ -60,7 +59,6 @@ function ListingCard({card, onDeleteCard, onUpdateCard}) {
           type="number"
           step="0.01"
           placeholder="New price..."
-        //   value={updatedPrice}
           onChange={(e) => setUpdatedPrice(parseFloat(e.target.value))}
         />
         <button type="submit">update</button>

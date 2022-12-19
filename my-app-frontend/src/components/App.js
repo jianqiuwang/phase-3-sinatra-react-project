@@ -2,7 +2,6 @@ import React, {useEffect, useState} from "react";
 import Header from "./Header";
 import ListingsContainer from "./ListingsContainer";
 import NewListingCards from "./NewListingCards";
-import ListingCard from "./ListingCard";
 
 function App() {
   const [cards, setCards]=useState([])
