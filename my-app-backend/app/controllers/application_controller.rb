@@ -7,11 +7,6 @@ class ApplicationController < Sinatra::Base
     listings.to_json
   end
 
-  get '/listings/:id' do 
-    listings = Listing.find(params[:id])
-    listings.to_json
-  end
-
   post '/listings' do
     listing=Listing.create(
       description: params[:description],

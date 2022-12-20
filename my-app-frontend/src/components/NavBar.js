@@ -36,6 +36,17 @@ function NavBar() {
       >
         Add Car
       </NavLink>
+      <NavLink
+        className="link"
+        to="/reviews"
+        exact
+        style={linkStyles}
+        activeStyle={{
+        background:"darkblue"
+        }}
+      >
+        Reviews
+      </NavLink>
     </div>
   )
 }

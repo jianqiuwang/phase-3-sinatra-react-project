@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import Header from "./Header";
 import ListingCard from "./ListingCard";
 import ListingsContainer from "./ListingsContainer";
+import ReviewsContanier from "./ReviewsContanier";
 import NewListingCards from "./NewListingCards";
 import { BrowserRouter,Route, Switch } from "react-router-dom";
 import NavBar from "./NavBar";
@@ -53,6 +54,9 @@ function App() {
             </Route>
             <Route excat path="/listings">
             <ListingsContainer cards={cardDisplay} handleDeleteCard={handleDeleteCard} onUpdateCard={handleUpdateCard}/>
+            </Route>
+            <Route exact path="/reviews">
+            <ReviewsContanier/>
             </Route>
             </Switch>
         </BrowserRouter>
