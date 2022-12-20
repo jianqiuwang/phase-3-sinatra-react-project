@@ -45,14 +45,13 @@ function App() {
       {/* <ListingsContainer cards={cardDisplay} handleDeleteCard={handleDeleteCard} onUpdateCard={handleUpdateCard}/> */}
       {/* <NewListingCards onAddCard={handleAddCard}/> */}
 
-
       <BrowserRouter>
       <NavBar/>
-           <Switch>
-            <Route exaxt path="/addnewcar">
+           <Switch className="switch">
+            <Route exact path="/addnewcar">
             <NewListingCards onAddCard={handleAddCard}/>
             </Route>
-            <Route excat path="/">
+            <Route excat path="/listings">
             <ListingsContainer cards={cardDisplay} handleDeleteCard={handleDeleteCard} onUpdateCard={handleUpdateCard}/>
             </Route>
             </Switch>

@@ -58,7 +58,7 @@ function ListingCard({card, onDeleteCard, onUpdateCard}) {
         <input
           type="number"
           step="0.01"
-          placeholder="New price..."
+          placeholder="new price"
           onChange={(e) => setUpdatedPrice(parseFloat(e.target.value))}
         />
         <button type="submit">update</button>

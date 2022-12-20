@@ -34,4 +34,8 @@ Listing.create([
     }
   ])
 
+
+
+ 
+  
 puts "✅ Done seeding!"
