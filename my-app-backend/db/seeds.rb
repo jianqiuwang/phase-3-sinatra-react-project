@@ -35,6 +35,50 @@ Listing.create([
   ])
 
 
+  Review.create([
+    {
+      "user_name": "user1",
+      "score": 5,
+      "comment": "Durable and luxury",
+      "listing_id": 69
+    },
+    {
+      "user_name": "user2",
+      "score": 4,
+      "comment": "Nice car! however it is really pricy",
+      "listing_id": 70
+    },
+    {
+      "user_name": "user3",
+      "score": 5,
+      "comment": "It never fails me",
+      "listing_id": 71
+    },
+    {
+      "user_name": "user4",
+      "score": 3,
+      "comment": "reliability is below average",
+      "listing_id": 72
+    },
+    {
+      "user_name": "user5",
+      "score": 5,
+      "comment": "A lot of space",
+      "listing_id": 73
+    },
+    {
+      "user_name": "user6",
+      "score": 3,
+      "comment": "The interior of this car is medicore in its class",
+      "listing_id": 69
+    },
+    {
+      "user_name": "user7",
+      "score": 5,
+      "comment": "Powerful Engine",
+      "listing_id": 72
+    }
+  ])
 
  
   
