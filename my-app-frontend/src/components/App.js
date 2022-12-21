@@ -4,6 +4,7 @@ import ListingCard from "./ListingCard";
 import ListingsContainer from "./ListingsContainer";
 import ReviewsContanier from "./ReviewsContanier";
 import NewListingCards from "./NewListingCards";
+import NewReviewForm from "./NewReviewForm";
 import { BrowserRouter,Route, Switch } from "react-router-dom";
 import NavBar from "./NavBar";
 
@@ -48,7 +49,7 @@ function App() {
 
       <BrowserRouter>
       <NavBar/>
-           <Switch className="switch">
+           <Switch>
             <Route exact path="/addnewcar">
             <NewListingCards onAddCard={handleAddCard}/>
             </Route>
@@ -57,6 +58,9 @@ function App() {
             </Route>
             <Route exact path="/reviews">
             <ReviewsContanier/>
+            </Route>
+            <Route exact path="/addnewreview">
+            <NewReviewForm/>
             </Route>
             </Switch>
         </BrowserRouter>
