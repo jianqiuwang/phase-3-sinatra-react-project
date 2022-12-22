@@ -50,17 +50,17 @@ function App() {
       <BrowserRouter>
       <NavBar/>
            <Switch>
-            <Route exact path="/addnewcar">
-            <NewListingCards onAddCard={handleAddCard}/>
+            <Route exact path="/listings/new">
+              <NewListingCards onAddCard={handleAddCard}/>
             </Route>
             <Route excat path="/listings">
-            <ListingsContainer cards={cardDisplay} handleDeleteCard={handleDeleteCard} onUpdateCard={handleUpdateCard}/>
+              <ListingsContainer cards={cardDisplay} handleDeleteCard={handleDeleteCard} onUpdateCard={handleUpdateCard}/>
             </Route>
             <Route exact path="/reviews">
-            <ReviewsContanier/>
+              <ReviewsContanier/>
             </Route>
-            <Route exact path="/addnewreview">
-            <NewReviewForm/>
+            <Route exact path="/reviews/new">
+              <NewReviewForm/>
             </Route>
             </Switch>
         </BrowserRouter>

@@ -74,7 +74,7 @@ Listing.create([
     {
       "user_name": "user6",
       "score": 3,
-      "comment": "The interior of this car is medicore in its class",
+      "comment": "The interior of this car is mediocre in its class",
       "listing_id": 1
     },
     {
