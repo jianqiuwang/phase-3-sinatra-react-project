@@ -4,7 +4,7 @@ class ApplicationController < Sinatra::Base
   # Add your routes here
   get '/listings' do 
     listings = Listing.all.order(:created_at)
-    listings.to_json
+    listings.to_json(include: [:reviews])
   end
 
   post '/listings' do
@@ -25,7 +25,7 @@ class ApplicationController < Sinatra::Base
       location: params[:location],
       price: params[:price]
     )
-    listing.to_json
+    listing.to_json(include: [:reviews])
   end
 
   delete '/listings/:id' do
