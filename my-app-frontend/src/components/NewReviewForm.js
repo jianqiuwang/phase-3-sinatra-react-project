@@ -1,11 +1,10 @@
 import React, {useState} from "react";
 
-function NewReviewForm({onAddReview}) {
+function NewReviewForm({onAddReview, listing_id}) {
     const [user_name, setUser_Name] = useState("")
     const [score, setScore] = useState(0)
     const [comment, setComment] = useState("")
-    const [listing_id, setListing_Id] = useState(0)
-
+  
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -32,7 +31,6 @@ function NewReviewForm({onAddReview}) {
       <input className="input" type="text" name="username" placeholder="username" onChange={(e)=>setUser_Name(e.target.value)}/>
       <input className="input" type="number" name="score" placeholder="score" onChange={(e)=>setScore(e.target.value)}/>
       <input className="input" type="text" name="comment" placeholder="comment" onChange={(e)=>setComment(e.target.value)}/>
-      <input className="input" type="number" name="listing_id" placeholder="card id" onChange={(e)=>setListing_Id(e.target.value)}/>
       <button className="input" type="submit">Submit</button>
     </form>
   );

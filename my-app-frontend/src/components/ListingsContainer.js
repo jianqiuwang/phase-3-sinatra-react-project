@@ -1,14 +1,17 @@
 import React from "react";
 import ListingCard from "./ListingCard";
 
-function ListingsContainer({cards, handleDeleteCard, onUpdateCard}) {
+
+function ListingsContainer({cards, handleDeleteCard, onUpdateCard, reviews}) {
+
   
-  const cardsArray=cards.map((card)=><ListingCard key={card.id} card={card} onDeleteCard={handleDeleteCard} onUpdateCard={onUpdateCard}/>)
+  const cardsArray=cards.map((card)=><ListingCard key={card.id} reviews={reviews} card={card} onDeleteCard={handleDeleteCard} onUpdateCard={onUpdateCard}/>)
 
   return (
     <main>
       <ul className="cards">
         {cardsArray}
+
       </ul>
     </main>
   );
