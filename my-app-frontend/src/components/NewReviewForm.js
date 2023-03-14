@@ -21,8 +21,8 @@ function NewReviewForm({onAddReview, listing_id}) {
       }),
     })
       .then((r) => r.json())
-      .then((newReview) => {
-        onAddReview(newReview);
+      .then((newReviews) => {
+        onAddReview(newReviews);
       });
   }
 

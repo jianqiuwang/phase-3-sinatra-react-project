@@ -51,6 +51,14 @@ function App() {
   // console.log(cardDisplay)
 
   function handleReview(newReview) {
+    const updatedCards = cards.map((card)=>{
+      if(card.id===newReview.listing_id){
+        return {...card, reviews:[...card.reviews, newReview]}
+      }else{
+        return card
+      }
+    })
+    setCards(updatedCards)
     setReviews([...reviews, newReview]);
   }
 
@@ -70,13 +78,13 @@ function App() {
               <NewListingCards onAddCard={handleAddCard}/>
             </Route>
             <Route excat path="/listings">
-              <ListingsContainer reviews={reviews} cards={cardDisplay} handleDeleteCard={handleDeleteCard} onUpdateCard={handleUpdateCard}/>
+              <ListingsContainer reviews={reviews} cards={cardDisplay} handleDeleteCard={handleDeleteCard} onUpdateCard={handleUpdateCard} onAddReview={handleReview}/>
             </Route>
             <Route exact path="/reviews">
               <ReviewsContanier reviews={reviews}/>
             </Route>
             <Route exact path="/reviews/new">
-              <NewReviewForm/>
+              <NewReviewForm onAddReview={handleReview}/>
             </Route>
             </Switch>
         </BrowserRouter>

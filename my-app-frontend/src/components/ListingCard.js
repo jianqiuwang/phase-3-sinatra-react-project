@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import ReviewCard from "./ReviewCard";
 import NewReviewForm from "./NewReviewForm";
 
-function ListingCard({card, reviews, onDeleteCard, onUpdateCard}) {
+function ListingCard({card, reviews, onDeleteCard, onUpdateCard, onAddReview}) {
   const [like, setLike]=useState(false);
   const {description, image, location, price } = card;
   const [updatedDescription, setUpdatedDescription] = useState(description)
@@ -39,9 +39,9 @@ function ListingCard({card, reviews, onDeleteCard, onUpdateCard}) {
 
       const reviewsArray=card.reviews.map((review)=><p key={review.id}>comment: {review.comment}</p>)
 
-      function addReview(){
+      // function addReview(){
 
-      }
+      // }
 
 
   return (
@@ -73,7 +73,7 @@ function ListingCard({card, reviews, onDeleteCard, onUpdateCard}) {
         <button type="submit">update</button>
       </form>
       <h3>Create a review</h3>
-      <NewReviewForm listing_id={card.id}/>
+      <NewReviewForm listing_id={card.id} onAddReview={onAddReview}/>
   
       </div>
       <>
